@@ -1,59 +1,92 @@
-#RaiseTech WP副業コース  
+# RaiseTech WP副業コース  
 最終課題  
 ハンバーガーサイト  
 
-----履歴----  
+## 履歴  
 6/8     構成考察  
 6/9     環境構築  
-6/10    indexページ、マークアップ開始  
+--  
+6/10    frontページ、マークアップ開始  
 6/13    scss側開始  
 6/18    中断  
 7/6     再開  
-7/29    フロントページのコーディング終了  
+7/29    frontページのコーディング終了  
 7/30    リファクタリング終了
-7/31    質問に答えていただいた箇所のリファクタリング
-（ここまで　　時間）  
+7/31    質問に答えていただいた箇所のリファクタリング開始  
+8/2     リファクタリング終了  
+--  
+8/3     archiveページ開始  
+8/13    archiveページ終了、archive_searchマークアップ終了  
+--  
+8/19    singleページマークアップ開始  
+8/20-23 中断  
+8/24    Sass側開始  
+8/28    singleページ終了、全体のリファクタリング  
+--  
+8/29    静的コーディング提出 ⇒ OK  
 
+**frontページ**  
 【累計】  
 構成・設計        1h20m  
 環境構築          2h  
 マークアップ      1h30m  
 Sass             44h10m  
 jQuery           4h  
-リファクタリング  
+リファクタリング  9h30m  
+合計　62h30m  
 
+**archiveページ**  
+【累計】  
+マークアップ      2h15m  
+Sass             10h  
+合計　12h15m  
 
+**archive_searchページ**  
+マークアップ      10m  
 
+**singleページ**  
+【累計】  
+マークアップ      45m  
+Sass             12h20m  
+合計　13h5m  
 
-----学習参考サイトや、考察、メモ----  
+**pageページ**  
+マークアップ      5m  
 
-M+ FONTSについて  
-http://mplus-webfonts.osdn.jp/  
+**全体**  
+リファクタリング  1h30m  
 
-font-weightについて  
-https://yumanoblog.com/xd-css/  
+**静的コーディング**  
+合計　89h35m  
 
-検索バーのinput要素のアイコン表示について参照サイト  
-https://www.tsukimi.net/submit-button_font-awesome.html  
+***  
+## 学習参考サイトや、考察、メモ  
+<dl>
+    <dt>M+ FONTSについて</dt>
+    <dd><a>http://mplus-webfonts.osdn.jp/</a></dd>
+</dl>
+<dl>
+    <dt>font-weightについて</dt>
+    <dd><a>https://yumanoblog.com/xd-css/</a></dd>
+</dl>
+<dl>
+    <dt>検索バーのinput要素のアイコン表示について参照サイト</dt>
+    <dd><a>https://www.tsukimi.net/submit-button_font-awesome.html</a></dd>
+</dl>
 
-**CSS Grid Layoutについて**  
-
-    CSS Grid Layout を極める！（基礎編）
-    https://qiita.com/kura07/items/e633b35e33e43240d363  
-
-    CSS Grid Layout を極める！（場面別編）  
-    https://qiita.com/kura07/items/486c19045aab8090d6d9  
-
-    5分で完璧に分かる！CSS Gridの基本的な使い方を解説  
-    https://coliss.com/articles/build-websites/operation/css/learn-css-grid-in-5-minutes.html  
-
-    ---->>> 一番分かりやすいCSS Grid Layoutの使い方ガイド  
-    https://webdesign-trends.net/entry/11086#Grid_LayoutFlexbox  
-
-    CSS Gridレイアウト入門：「fr」でのサイズ指定  
-    https://hacknote.jp/archives/26960/  
-
-
+<!-- <dl><strong>CSS Grid Layoutについて</strong> -->
+<dl>CSS Grid Layoutについて
+    <dt>CSS Grid Layout を極める！（基礎編）</dt>
+    <dd><a>https://qiita.com/kura07/items/e633b35e33e43240d363</a></dd>
+    <dt>CSS Grid Layout を極める！（場面別編）</dt>
+    <dd><a>https://qiita.com/kura07/items/486c19045aab8090d6d9</a></dd>
+    <dt>5分で完璧に分かる！CSS Gridの基本的な使い方を解説</dt>
+    <dd><a>https://coliss.com/articles/build-websites/operation/css/learn-css-grid-in-5-minutes.html</a></dd>
+    <dt>---->>> 一番分かりやすいCSS Grid Layoutの使い方ガイド</dt>
+    <dd><a>https://webdesign-trends.net/entry/11086#Grid_LayoutFlexbox</a></dd>
+    <dt>CSS Gridレイアウト入門：「fr」でのサイズ指定</dt>
+    <dd><a>https://hacknote.jp/archives/26960/</a></dd>
+</dl>
 
 検索バーの入力フォームとボタンが揃わない  
 ---->>>     入力フォームに「vertical-align : top;」の設定  
@@ -107,7 +140,7 @@ https://qumeru.com/magazine/37
 
 
 
-#命名規則（FLOCSSに帰属）
+## 命名規則（FLOCSSに帰属）
 
 .block{}                    親要素  
 .block__element{}           blockに属する子要素  
@@ -136,7 +169,7 @@ layout-list
 ***
 
 
-**余白の調整**  
+## 余白の調整  
 margin-bottom: 0;  
 margin-topで余白の調整をする。  
 ※要素の下に、何が来るかわからないから、下につく方が、上と調整する。  
@@ -144,7 +177,7 @@ margin-topで余白の調整をする。
 https://design-remarks.com/margin-top-or-bottom/  
 ***
 
-**【font-family】について**  
+## 【font-family】について  
     font-family: 候補1,候補2,候補3,フォントの種類;  
         「sans-serif」  ゴシック体系のフォント（MSゴシック、中ゴシック、Arialなど）
         「serif」       明朝体系のフォント（MS明朝、MS P明朝、Garamond、MS Georgia、Times New Romanなど）  
@@ -157,4 +190,4 @@ https://design-remarks.com/margin-top-or-bottom/
 ***
 
 
-#Sass-階層説明
+## Sass-階層説明
