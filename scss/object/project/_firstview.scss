@@ -4,13 +4,13 @@
     // height: calc( 100vh - 74px );
     // background-color: $color--background-color;
     /* 背景の設定 */
-    background-image: url(/img/front/first-view--small.jpg);
+    background-image: url(../img/front/first-view--small.jpg);
     background-position: center;
     background-size: cover;         /* 画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小 */
     display: flex;                  /* 親要素に指定 */
     align-items: center;            /* 垂直方向の指定 */
     @include breakpoint( breakpoint-medium ) {
-        background-image: url(/img/front/first-view--large.jpg);
+        background-image: url(../img/front/first-view--large.jpg);
     }
     @include breakpoint( breakpoint-large ) {
         height: 49vh;
@@ -46,11 +46,11 @@
     &::before {
         content: "";
         // バーガーの画像
-        background-image: url(/img/archive/first-view--small.jpg);
+        background-image: url(../img/archive/first-view--small.jpg);
         background-size: cover;
         opacity: 0.5;       // 透過の設定
         @include breakpoint( breakpoint-large ) {
-            background-image: url(/img/archive/first-view--large.jpg);
+            background-image: url(../img/archive/first-view--large.jpg);
             background-position: center;
         }
         position: absolute; // 絶対配置
@@ -103,7 +103,7 @@
     color: $color--text-sub;
 
     /* 背景の設定 */
-    background-image: url(/img/single/first-view.jpg);
+    background-image: url(../img/single/first-view.jpg);
     background-position: center;
     background-size: cover;         /* 画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小 */
     @include breakpoint( breakpoint-medium ) {
@@ -131,7 +131,7 @@
     color: $color--text-sub;
 
     /* 背景の設定 */
-    background-image: url(/img/page/first-view.jpg);
+    background-image: url(../img/page/first-view.jpg);
     background-position: center;
     background-size: cover;         /* 画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小 */
     @include breakpoint( breakpoint-medium ) {

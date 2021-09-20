@@ -10,12 +10,12 @@
     &::before {
         content: "";
         // 真ん中の地図画像
-        background-image: url(/img/front/map--small.jpg);
+        background-image: url(../img/front/map--small.jpg);
         background-size: cover;
         opacity: 0.6;       // 透過の設定
         // background-blend-mode:lighten;  // 背景色と背景画像のブレンド方法を指定(下レイヤー色と上レイヤー色のそれぞれのRGB値を比較して、よりRGB値の高い（明るい）色を採用する)
         @include breakpoint( breakpoint-medium ) {
-            background-image: url(/img/front/map--large.jpg);
+            background-image: url(../img/front/map--large.jpg);
         }
         position: absolute; // 絶対配置
         top: 0;

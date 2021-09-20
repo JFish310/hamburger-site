@@ -254,7 +254,7 @@ https://daib-log.com/responsive/
 .l-footer {
   width: 100%;
   height: 150px;
-  background-image: url(/img/front/footer.png);
+  background-image: url(../img/front/footer.png);
   background-repeat: repeat;
   color: #fff;
   font-family: "M+ 1m";
@@ -772,7 +772,7 @@ https://daib-log.com/responsive/
   width: 100%;
   height: 285px;
   /* 背景の設定 */
-  background-image: url(/img/front/first-view--small.jpg);
+  background-image: url(../img/front/first-view--small.jpg);
   background-position: center;
   background-size: cover;
   /* 画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小 */
@@ -789,7 +789,7 @@ https://daib-log.com/responsive/
 
 @media (min-width: 834px) {
   .p-first-view {
-    background-image: url(/img/front/first-view--large.jpg);
+    background-image: url(../img/front/first-view--large.jpg);
   }
 }
 
@@ -845,7 +845,7 @@ https://daib-log.com/responsive/
 
 .p-first-view--archive::before {
   content: "";
-  background-image: url(/img/archive/first-view--small.jpg);
+  background-image: url(../img/archive/first-view--small.jpg);
   background-size: cover;
   opacity: 0.5;
   /* SP基準--tablet-- */
@@ -859,7 +859,7 @@ https://daib-log.com/responsive/
 
 @media (min-width: 1025px) {
   .p-first-view--archive::before {
-    background-image: url(/img/archive/first-view--large.jpg);
+    background-image: url(../img/archive/first-view--large.jpg);
     background-position: center;
   }
 }
@@ -915,7 +915,7 @@ https://daib-log.com/responsive/
   height: 225px;
   color: #fff;
   /* 背景の設定 */
-  background-image: url(/img/single/first-view.jpg);
+  background-image: url(../img/single/first-view.jpg);
   background-position: center;
   background-size: cover;
   /* 画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小 */
@@ -955,7 +955,7 @@ https://daib-log.com/responsive/
   height: 225px;
   color: #fff;
   /* 背景の設定 */
-  background-image: url(/img/page/first-view.jpg);
+  background-image: url(../img/page/first-view.jpg);
   background-position: center;
   background-size: cover;
   /* 画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小 */
@@ -1107,7 +1107,7 @@ https://daib-log.com/responsive/
 
 .p-place__take-out {
   padding: 10px;
-  background-image: url(/img/front/take-out.jpg);
+  background-image: url(../img/front/take-out.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1163,7 +1163,7 @@ https://daib-log.com/responsive/
   padding: 10px;
   /* SP基準--tablet-- */
   /* SP基準--PC-- */
-  background-image: url(/img/front/eat-in.jpg);
+  background-image: url(../img/front/eat-in.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1224,7 +1224,7 @@ https://daib-log.com/responsive/
 
 .p-access::before {
   content: "";
-  background-image: url(/img/front/map--small.jpg);
+  background-image: url(../img/front/map--small.jpg);
   background-size: cover;
   opacity: 0.6;
   /* SP基準--tablet-- */
@@ -1238,7 +1238,7 @@ https://daib-log.com/responsive/
 
 @media (min-width: 834px) {
   .p-access::before {
-    background-image: url(/img/front/map--large.jpg);
+    background-image: url(../img/front/map--large.jpg);
   }
 }
 

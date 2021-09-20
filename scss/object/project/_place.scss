@@ -38,7 +38,7 @@
     /* Take Out */
     &__take-out{
         padding: 10px;              // 背景画像（写真）に対して
-        background-image: url(/img/front/take-out.jpg);
+        background-image: url(../img/front/take-out.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;     /* 画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小 */
@@ -96,7 +96,7 @@
             // ulをjustify-content: center;にしたので、余白調整
             margin-left: 6%;
         }
-        background-image: url(/img/front/eat-in.jpg);
+        background-image: url(../img/front/eat-in.jpg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;         /* 画像の縦横比を崩すことなく、画像ができるだけ大きくなるよう拡大縮小 */
