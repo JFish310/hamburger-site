@@ -5,7 +5,9 @@
 ## 履歴  
 6/8     構成考察  
 6/9     環境構築  
+
 --  
+
 6/10    frontページ、マークアップ開始  
 6/13    scss側開始  
 6/18    中断  
@@ -14,15 +16,21 @@
 7/30    リファクタリング終了
 7/31    質問に答えていただいた箇所のリファクタリング開始  
 8/2     リファクタリング終了  
+
 --  
+
 8/3     archiveページ開始  
 8/13    archiveページ終了、archive_searchマークアップ終了  
+
 --  
+
 8/19    singleページマークアップ開始  
 8/20-23 中断  
 8/24    Sass側開始  
 8/28    singleページ終了、全体のリファクタリング  
+
 --  
+
 8/29    静的コーディング提出 ⇒ OK  
 
 **frontページ**  
@@ -190,48 +198,48 @@ https://design-remarks.com/margin-top-or-bottom/
 ***
 
 
-## Sass-階層説明
-hamburger-site
-├─ css
-|  ├─ ress.css
-|  ├─ style.css
-|  └─ style.css.map
-├─ img
-├─ js
-|  └─ menu.js
-├─ scss
-|  ├─ foundation
-|  |  ├─ _base.scss
-|  |  ├─ _mixin.scss
-|  |  └─ _variable.scss
-|  ├─ layout
-|  |  ├─ _container.scss
-|  |  ├─ _footer.scss
-|  |  ├─ _header.scss
-|  |  ├─ _main.scss
-|  |  └─ _sidebar.scss
-|  ├─ object
-|  |  ├─component
-|  |  |  ├─ _blockquote.scss
-|  |  |  ├─ _box.scss
-|  |  |  ├─ _button.scss
-|  |  |  ├─ _definition-list.scss
-|  |  |  ├─ _layout-list.scss
-|  |  |  └─ _section-title.scss
-|  |  ├─project
-|  |  |  ├─ _access.scss
-|  |  |  ├─ _archive.scss
-|  |  |  ├─ _card.scss
-|  |  |  ├─ _firstview.scss
-|  |  |  ├─ _gnavi.scss
-|  |  |  ├─ _pagination.scss
-|  |  |  ├─ _search.scss
-|  |  |  └─ _single.scss
-|  |  └─utility
-|  └─ style.scss
-├─ archive_search.html
-├─ archive.html
-├─ index.html
-├─ page.html
-├─ single.html
-└─ README.md
+## Sass-ディレクトリ構造  
+hamburger-site  
+├─ css  
+|  ├─ ress.css  
+|  ├─ style.css  
+|  └─ style.css.map  
+├─ img  
+├─ js  
+|  └─ menu.js  
+├─ scss  
+|  ├─ foundation  
+|  |  ├─ _base.scss  
+|  |  ├─ _mixin.scss  
+|  |  └─ _variable.scss  
+|  ├─ layout  
+|  |  ├─ _container.scss  
+|  |  ├─ _footer.scss  
+|  |  ├─ _header.scss  
+|  |  ├─ _main.scss  
+|  |  └─ _sidebar.scss  
+|  ├─ object  
+|  |  ├─component  
+|  |  |  ├─ _blockquote.scss  
+|  |  |  ├─ _box.scss  
+|  |  |  ├─ _button.scss  
+|  |  |  ├─ _definition-list.scss  
+|  |  |  ├─ _layout-list.scss  
+|  |  |  └─ _section-title.scss  
+|  |  ├─project  
+|  |  |  ├─ _access.scss  
+|  |  |  ├─ _archive.scss  
+|  |  |  ├─ _card.scss  
+|  |  |  ├─ _firstview.scss  
+|  |  |  ├─ _gnavi.scss  
+|  |  |  ├─ _pagination.scss  
+|  |  |  ├─ _search.scss  
+|  |  |  └─ _single.scss  
+|  |  └─utility  
+|  └─ style.scss  
+├─ archive_search.html  
+├─ archive.html  
+├─ index.html  
+├─ page.html  
+├─ single.html  
+└─ README.md  
