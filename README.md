@@ -142,11 +142,13 @@ displayプロパティのデフォルト値一覧
 https://programmercollege.jp/column/4914/  
 
 **背景画像のレスポンシブについて**  
+```
 背景画像の比率を保ったまま、レスポンシブ対応する  
 https://taneppa.net/responsive_background_image/  
 
 背景画像の縦横比率を維持したまま、コンテンツの幅に合わせて表示させる方法  
 https://blog.looseknot.jp/css/background-image-size.html  
+```
 
 **フォントサイズのレスポンシブについて**
 
