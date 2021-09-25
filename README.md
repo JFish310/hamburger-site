@@ -69,7 +69,7 @@ Sass             12h20m
 
 ***  
 ## 学習参考サイトや、考察、メモ  
-<dl>
+<!-- <dl>
     <dt>M+ FONTSについて</dt>
     <dd><a>http://mplus-webfonts.osdn.jp/</a></dd>
 </dl>
@@ -80,7 +80,31 @@ Sass             12h20m
 <dl>
     <dt>検索バーのinput要素のアイコン表示について参照サイト</dt>
     <dd><a>https://www.tsukimi.net/submit-button_font-awesome.html</a></dd>
-</dl>
+</dl> -->
+<!-- <dl><strong>CSS Grid Layoutについて</strong> -->
+<!-- <dl>CSS Grid Layoutについて
+    <dt>CSS Grid Layout を極める！（基礎編）</dt>
+    <dd><a>https://qiita.com/kura07/items/e633b35e33e43240d363</a></dd>
+    <dt>CSS Grid Layout を極める！（場面別編）</dt>
+    <dd><a>https://qiita.com/kura07/items/486c19045aab8090d6d9</a></dd>
+    <dt>5分で完璧に分かる！CSS Gridの基本的な使い方を解説</dt>
+    <dd><a>https://coliss.com/articles/build-websites/operation/css/learn-css-grid-in-5-minutes.html</a></dd>
+    <dt>●●一番分かりやすいCSS Grid Layoutの使い方ガイド</dt>
+    <dd><a>https://webdesign-trends.net/entry/11086#Grid_LayoutFlexbox</a></dd>
+    <dt>CSS Gridレイアウト入門：「fr」でのサイズ指定</dt>
+    <dd><a>https://hacknote.jp/archives/26960/</a></dd>
+</dl> -->
+
+**M+ FONTSについて**  
+http://mplus-webfonts.osdn.jp/  
+
+**font-weightについて**  
+https://yumanoblog.com/xd-css/  
+
+**検索バーのinput要素のアイコン表示について参照サイト**  
+https://www.tsukimi.net/submit-button_font-awesome.html  
+
+
 
 <!-- <dl><strong>CSS Grid Layoutについて</strong> -->
 <dl>CSS Grid Layoutについて
@@ -96,7 +120,7 @@ Sass             12h20m
     <dd><a>https://hacknote.jp/archives/26960/</a></dd>
 </dl>
 
-検索バーの入力フォームとボタンが揃わない  
+**検索バーの入力フォームとボタンが揃わない**  
 ---->>>     入力フォームに「vertical-align : top;」の設定  
             一応、検索ボタンにも設定する  
 
@@ -199,6 +223,7 @@ https://design-remarks.com/margin-top-or-bottom/
 
 
 ## Sass-ディレクトリ構造  
+```
 hamburger-site  
 ├─ css  
 |  ├─ ress.css  
@@ -243,3 +268,6 @@ hamburger-site
 ├─ page.html  
 ├─ single.html  
 └─ README.md  
+```
+
+
