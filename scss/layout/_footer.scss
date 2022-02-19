@@ -1,3 +1,6 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+
 /* display: flexを使った方法 */
 .l-footer{
     width: 100%;
@@ -6,7 +9,7 @@
 
     background-image: url(../img/front/footer.png);
     background-repeat: repeat;    // 背景画像リピート
-    color: $color--text-sub;
+    color: variable.$color--text-sub;
     font-family: "M+ 1m";
 
     display: flex;              /* 親要素に指定 */

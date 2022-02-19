@@ -2,12 +2,12 @@
 .l-header{
     width: 100%;
     height: 217px;      // %のほうがいいのかな？
-    background-color: $color--background--header;
-    color: $color--text-main;
+    background-color: variable.$color--background--header;
+    color: variable.$color--text-main;
     display: flex;              /* 親要素に指定 */
     flex-direction: column;     /* 積み重なるように配置する */
 
-    @include breakpoint( breakpoint-large ){
+    @include mixin.breakpoint( breakpoint-large ){
         // max-width: 1280px;      // ←ここはラッパーとか作ってコンテンツまるっとのほうがいいかもしれん
         flex-direction: row;    // 横並び
         height: 20vh;           // 画面に対しての割合（217/1080=20%）
@@ -20,7 +20,7 @@
         font-size: 4.0rem;
         // margin-top: 54px;
         // font-size: 2.6rem;
-        @include breakpoint( breakpoint-large ){
+        @include mixin.breakpoint( breakpoint-large ){
             margin: auto;           // リセット
             // margin-left: 65px;      // margin設定
             margin-left: 4%;
@@ -30,12 +30,12 @@
     /* メニューボタン */
     .c-button--menu{
         margin: 0 16px 0 auto;      // 右寄せ、右の余白の指定
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-right: 26px;     // 右の余白指定
             padding-bottom: 0px;    // h1との余白を詰める
         }
         // メニューボタンは非表示
-        @include breakpoint( breakpoint-large ){
+        @include mixin.breakpoint( breakpoint-large ){
             display: none;
         }
     }

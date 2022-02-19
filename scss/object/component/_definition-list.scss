@@ -1,6 +1,10 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
 /* p-placeに使用 */
 .c-dl--level1{
-    color: $color--card-text;
+    color: variable.$color--card-text;
     // dt内はh3のため、サイズの指定はh3で行う。c-title--h3へ
     dd{
         margin-top: 15px;
@@ -12,8 +16,8 @@
 /* p-accessに使用 */
 .c-dl--level2{
     padding: 40px;
-    color: $color--text-sub;
-    @include breakpoint( breakpoint-large ){
+    color: variable.$color--text-sub;
+    @include mixin.breakpoint( breakpoint-large ){
         // 幅1536pxにするにはカンプの数値の80%
         padding-top: 66px;
         padding-left: 95px;
@@ -31,18 +35,18 @@
 /* p-archiveに使用 */
 .c-dl--level3{
     width: 100%;        // 周りの余白は親のpaddingで調整するから、ここでは目一杯広げる
-    color: $color--card-text;
+    color: variable.$color--card-text;
     font-family: "M+ 1m";
     h2{
         font-size: 2.8rem;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             font-size: 3.6rem;
         }
     }
     dd{
         // height: 276px;
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 25px;
         }
     }
@@ -54,10 +58,10 @@
         width: 246px;
         height: 114px;
         margin-top: 10px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             width: 284px;
         }
-        @include breakpoint( breakpoint-large ){
+        @include mixin.breakpoint( breakpoint-large ){
             margin-top: 17px;
             width: 75%;
             height: 73px;
@@ -68,17 +72,17 @@
 /* singleページで使用 */
 .c-dl--level5{
     width: 100%;        // 周りの余白は親のpaddingで調整するから、ここでは目一杯広げる
-    color: $color--text-single;
+    color: variable.$color--text-single;
     font-family: "M+ 1m";
     h2{
         font-size: 2.8rem;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             font-size: 3.6rem;
         }
     }
     dd{
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
     }

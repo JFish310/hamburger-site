@@ -1,13 +1,17 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
 .c-blockquote{
-    background-color: $color--background--block;
+    background-color: variable.$color--background--block;
 
     /* 余白調整 */
     padding: 30px 5%;   // 上下(30px) 左右(20, 16px  17/335px)
-    @include breakpoint( breakpoint-medium ){
+    @include mixin.breakpoint( breakpoint-medium ){
         // padding: 50px 7%;   // 上下(50px, 60px) 左右(50, 56px  53/714px)
         padding: 50px 7% 60px 7%;   // 上下(50px, 60px) 左右(50, 56px  53/714px)
     }
-    @include breakpoint( breakpoint-large ){
+    @include mixin.breakpoint( breakpoint-large ){
         padding: 50px 4%;   // 上下(50px) 左右(50, 60px  55/1353px)
     }
 

@@ -1,6 +1,10 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
 /* gridでheader、main（first-view、place、access）、sidebarのレイアウト指定 */
 .l-container{
-    @include breakpoint( breakpoint-large ){
+    @include mixin.breakpoint( breakpoint-large ){
         display: grid;
         grid-template-columns: 1fr 19%; // メニューバーは親要素の19%
         .l-header{

@@ -1,3 +1,7 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
 /* archive, archive-searchページ　レスポンシブ　縦並び→横並び */
 .c-layout-list--row{
     &__item{    //.c-layout-list--row__item
@@ -10,10 +14,10 @@
         margin-top: 20.9px;
         &:first-of-type{
             margin-top: 22px;
-            @include breakpoint( breakpoint-medium ){
+            @include mixin.breakpoint( breakpoint-medium ){
                 margin-top: 37px;
             }
-            @include breakpoint( breakpoint-large ){
+            @include mixin.breakpoint( breakpoint-large ){
                 margin-top: 70px;
             }
         }
