@@ -37,7 +37,7 @@ PCファーストなら、max-width
 https://daib-log.com/responsive/
 2021.05
 ----------------------------------------------------------*/
-@use "../../foundation/base";
+@use "./base";
 
 /* モバイルファースト */
 @mixin breakpoint( $breakpoint ) {

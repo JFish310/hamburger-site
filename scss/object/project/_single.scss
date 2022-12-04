@@ -1,21 +1,25 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
 .p-single{
     /* 余白調整 */
     padding: 30px 5% 70px 5%;
-    @include breakpoint( breakpoint-medium ){
+    @include mixin.breakpoint( breakpoint-medium ){
         padding: 60px 5% 70px 7%;
     }
-    @include breakpoint( breakpoint-large ){
+    @include mixin.breakpoint( breakpoint-large ){
         padding: 60px 6% 179px 6%;
     }
 
     font-family: "M+ 1m";
-    color: $color--text-single;
+    color: variable.$color--text-single;
 
     h3{
         font-size: 2.4rem;
         font-weight: 700;
         margin-top: 34px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
     }
@@ -23,39 +27,39 @@
         font-size: 2.0rem;
         font-weight: 700;
         margin-top: 29px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 59px;
         }
     }
     .c-blockquote{
         // 上のブロックとの余白
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
     }
     &__image--large{
         // 上のブロックとの余白
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
     }
     .p-card--single{
         // 上のブロックとの余白
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
     }
     .p-single__image--small{
         // 上のブロックとの余白、中央寄せ
         margin: 30px auto 0 auto;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
         width: 80%;     // 80% 267/335px, 81% 581/714px, 43% 581/1353px
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             width: 43%;
         }
         display: block; // imgはinlineだからblockに指定
@@ -63,7 +67,7 @@
     .p-single__images{
         // 上のブロックとの余白
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
 
@@ -72,22 +76,22 @@
         grid-template-columns: repeat(1, 1fr);  /* gridの設定(1列) */
         row-gap: 20px;                          /* 画像間の余白 */
         justify-items: center;                  /* 中央寄せ */
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             grid-template-columns: repeat(2, 1fr);  /* gridの設定(2列) */
             gap: 20px 16px;                         /* 画像間の余白 縦方向 横方向 */
         }
-        @include breakpoint( breakpoint-large ){
+        @include mixin.breakpoint( breakpoint-large ){
             grid-template-columns: repeat(3, 1fr);  /* gridの設定(3列) */
             gap: 20px 20px;                         /* 画像間の余白 縦方向 横方向 */
         }
         img{
             // 画像幅の指定
             width: 349px;
-            @include breakpoint( breakpoint-medium ){
+            @include mixin.breakpoint( breakpoint-medium ){
                 // width: 49%;     // 349/714px
                 width: 100%;
             }
-            @include breakpoint( breakpoint-large ){
+            @include mixin.breakpoint( breakpoint-large ){
                 // width: 32%;     // 438/1353px
                 max-width: 438px;
             }
@@ -96,12 +100,12 @@
     .p-single__list{
         // 上のブロックとの余白
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
         ol{
             margin-top: 20px;
-            @include breakpoint( breakpoint-medium ){
+            @include mixin.breakpoint( breakpoint-medium ){
                 margin-left: 50px;
             }
             li{
@@ -114,7 +118,7 @@
         }
         ul{
             margin-top: 20px;
-            @include breakpoint( breakpoint-medium ){
+            @include mixin.breakpoint( breakpoint-medium ){
                 margin-left: 50px;
             }
             ul{
@@ -124,16 +128,16 @@
     }
     pre{
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
         height: 237px;
-        background-color: $color--background--block;
+        background-color: variable.$color--background--block;
         padding: 50px 16.4%;   // 上下50px 左右(50 59 16.4% 55/335px, 50 69 8.4% 60/714px, 50 60 4% 55/1353px)
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             padding: 50px 8.4%;
         }
-        @include breakpoint( breakpoint-large ){
+        @include mixin.breakpoint( breakpoint-large ){
             padding: 50px 4%;
         }
         code{
@@ -143,23 +147,23 @@
     table{
         width: 100%;
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
         border-collapse: collapse;  // 一重線
         background-color: white;
         tr{
             height: 77px;
-            border: solid 1px $color--text-main;
+            border: solid 1px variable.$color--text-main;
             td{
                 padding-left: 30px;
-                border: solid 1px $color--text-main;
+                border: solid 1px variable.$color--text-main;
                 &:first-of-type{
                     width: 40%;
-                    @include breakpoint( breakpoint-medium ){
+                    @include mixin.breakpoint( breakpoint-medium ){
                         width: 30%;
                     }
-                    @include breakpoint( breakpoint_large ){
+                    @include mixin.breakpoint( breakpoint_large ){
                         width: 32%;
                     }
                 }
@@ -168,25 +172,25 @@
     }
     button{
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
 
         width: 100%;
         max-width: 429px;
         height: 81px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             height: 104px;
         }
-        background: linear-gradient( $color--background--menu-pc , #DED8D3 );
-        border: 1px solid $color--text-main;    // 枠線指定（太さ・スタイル・色）
+        background: linear-gradient( variable.$color--background--menu-pc , #DED8D3 );
+        border: 1px solid variable.$color--text-main;    // 枠線指定（太さ・スタイル・色）
         border-radius: 1em;                     /* 角丸 */
         cursor: pointer;
         font-weight: 700;
     }
     .p-single__bold{
         margin-top: 30px;
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 60px;
         }
     }

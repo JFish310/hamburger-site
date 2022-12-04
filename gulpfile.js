@@ -2,6 +2,7 @@
 $ npx gulp --domain "サイトのドメイン"
 //styleguide
 $ npx gulp styleguide
+$ npx gulp -v
 */
 
 // function defaultTask(test) {
@@ -39,7 +40,7 @@ const srcPath = {
 }
 // 出力先パス
 const destPath = {
-  'css'  : './css/',
+    'css': './css/',
 //   'php'  : './',
 //   'js'   : './js/'
 }
@@ -50,13 +51,11 @@ const destPath = {
 const sass         = require( 'gulp-sass' )( require('sass') ); // cssコンパイル
 const plumber      = require( 'gulp-plumber' );                 // エラーが発生しても強制終了させない
 const notify       = require( 'gulp-notify' );                  // エラー発生時のアラート出力
-// const postcss      = require( 'gulp-postcss' );                 //Node.js製、CSS操作プラグインのフレームワーク
+// const postcss      = require( 'gulp-postcss' );              // Node.js製、CSS操作プラグインのフレームワーク
 const autoprefixer = require( 'gulp-autoprefixer' );            // ベンダープレフィックス自動付与(条件はpackage.jsonに記載)
 const browserSync  = require( 'browser-sync' );                 // ブラウザシンク
 const minimist     = require( 'minimist' );                     // コマンドラインパーサー
-// const rename       = require( 'gulp-rename' );                  // リネーム
-// const del          = require( 'del' );                          //ディレクトリ削除
-// const fractal      = require( '@frctl/fractal' ).create();      // fractal
+// const del          = require( 'del' );                          // ディレクトリ削除
 
 //---------------------------------------------------------
 //  scssコンパイル
@@ -65,10 +64,10 @@ const scssCompile = (done) => {
     return src( srcPath.scss, {
         sourcemaps: true, // init
     })
-    // // エラーが出ても処理継続
-    // .pipe( plumber( {
-    //     errorHandler: notify.onError( 'Error:<%= error.message %>' )
-    // }))
+    // エラーが出ても処理継続
+    .pipe( plumber( {
+        errorHandler: notify.onError( 'Error:<%= error.message %>' )
+    }))
     // CSS形式 => expanded：一般的なCSS形式　compressed：空白、改行取り除く(本番環境用)
     .pipe( sass({ outputStyle: 'expanded' }))
     // ベンダープレフィックス自動付与
@@ -173,9 +172,9 @@ const browserSyncReload = (done) => {
 //   notify: false
 // }
 
-// //---------------------------------------------------------
-// //  dev copy
-// //---------------------------------------------------------
+//---------------------------------------------------------
+//  dev copy
+//---------------------------------------------------------
 
 // const clean = ( done ) => {
 // 	return del( [src_destPath.scss] );
@@ -197,41 +196,7 @@ const browserSyncReload = (done) => {
 // 	.pipe( dest( src_destPath.js ) );
 // 	done();
 // };
-
-// // ComponentはComponentsへコピー
-// const devcopyComponent = ( done ) => {
-// 	return src([
-// 		// srcPath.scss,
-// 		// '!./production/sass/foundation/*.scss',
-// 		// '!./production/sass/style.scss',
-//     './production/sass/object/component/*.scss'
-// 	], {
-// 		dot: true
-// 	} )
-// 	.pipe( rename ( function ( path ) {
-// 		path.dirname = '/components/' + path.basename.replace( '_', '' );
-// 		path.basename = 'style';
-// 	} ) )
-// 	.pipe( dest( sg_srcPath.base ) );
-// 	done();
-// };
-
-// // ProjectはProjectsへコピー
-// const devcopyProject = ( done ) => {
-// 	return src([
-// 		'./production/sass/object/project/*.scss',
-// 	], {
-// 		dot: true
-// 	} )
-// 	.pipe( rename ( function ( path ) {
-// 		path.dirname = '/projects/' + path.basename.replace( '_', '' );
-// 		path.basename = 'style';
-// 	} ) )
-// 	.pipe( dest( sg_srcPath.base ) );
-// 	done();
-// };
-
-// exports.devcopy = series( clean, srccopySass, srccopyJs, devcopyComponent, devcopyProject );
+// exports.devcopy = series( clean, srccopySass, srccopyJs );
 
 //---------------------------------------------------------
 //  watchタスク
@@ -242,13 +207,6 @@ const watchFiles = (done) => {
     // watch( srcPath.js, series( jsWatch, browserSyncReload ))
     done();
 }
-// const watchStyleguide = (done) => {
-//   watch( sg_srcPath.watch, series( styleguide_scssCompile ))
-//   watch( sg_srcPath.watch, series( sg_watch, styleguideTask ))
-//   // watch( sg_srcPath.watch, series( sg_watch, browserSyncReload ))
-//   watch( sg_srcPath.js, series( sg_jsWatch, styleguideTask ))
-//   done();
-// }
 
 //---------------------------------------------------------
 //  モジュール作成

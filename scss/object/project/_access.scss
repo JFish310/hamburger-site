@@ -1,10 +1,14 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
 /* 画像のレイヤーの修正 */
 .p-access{
     position: relative; // 相対配置
     width: 100%;
     height: 690px;
     // 一番奥の黒い背景
-    background-color: $color--background--mask-access;
+    background-color: variable.$color--background--mask-access;
 
     // 真ん中の地図画像の透過レイヤーの疑似要素
     &::before {
@@ -14,7 +18,7 @@
         background-size: cover;
         opacity: 0.6;       // 透過の設定
         // background-blend-mode:lighten;  // 背景色と背景画像のブレンド方法を指定(下レイヤー色と上レイヤー色のそれぞれのRGB値を比較して、よりRGB値の高い（明るい）色を採用する)
-        @include breakpoint( breakpoint-medium ) {
+        @include mixin.breakpoint( breakpoint-medium ) {
             background-image: url(../img/front/map--large.jpg);
         }
         position: absolute; // 絶対配置
@@ -26,20 +30,20 @@
     // 主に文字の部分にかかる濃い最前のレイヤーの疑似要素
     &::after {
         content: "";
-        background: rgba($color--background--mask-access, 0.4);
+        background: rgba(variable.$color--background--mask-access, 0.4);
         position: absolute; // 絶対配置
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         height: 60%;
-        @include breakpoint( breakpoint-medium ) {
+        @include mixin.breakpoint( breakpoint-medium ) {
             width: 100%;
             height: 100%;
             // top: 0;
             // left: 0;
         }
-        @include breakpoint( breakpoint-large ) {
+        @include mixin.breakpoint( breakpoint-large ) {
             width: 61%;
             height: 100%;
             // top: 0;
@@ -54,17 +58,17 @@
         dd{
             margin-top: 15px;
         }
-        @include breakpoint( breakpoint-medium ) {
+        @include mixin.breakpoint( breakpoint-medium ) {
             height: 100%;
         }
-        @include breakpoint( breakpoint-large ) {
+        @include mixin.breakpoint( breakpoint-large ) {
             height: 100%;
             width: 61%;
         }
     }
     // タイトル（見出しが入ります）
     h2{
-        color: $color--text-sub;
+        color: variable.$color--text-sub;
         font-size: 3.0rem;
         // position: relative;
         // z-index: 1;
@@ -73,7 +77,7 @@
         &::after{
             content: "";
             display: block;                             // ブロックが積みあがる
-            border-bottom: solid $color--text-sub 2px;  // 線種、色、太さ
+            border-bottom: solid variable.$color--text-sub 2px;  // 線種、色、太さ
             width: 75px;                                // 線の長さ
             margin-top: 20px;                           // タイトルとの余白
         }

@@ -1,13 +1,17 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
 .p-archive{
     // padding: 20px;
     // padding: 5.8%;
     padding: 6%;
-    @include breakpoint( breakpoint-large ){
+    @include mixin.breakpoint( breakpoint-large ){
         padding: 3% 6%;
     }
     .c-dl--level3{
         margin-top: 10px;   // margin-top: 30px;    paddingが20pxあるから
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             margin-top: 16px;
         }
     }

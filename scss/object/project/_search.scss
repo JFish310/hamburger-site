@@ -1,11 +1,15 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
 /* 検索バー */
 .p-search{
     width: 85%;
     margin: auto;       // 中央寄せ
-    @include breakpoint ( breakpoint-medium ){
+    @include mixin.breakpoint ( breakpoint-medium ){
         width: 65%;
     }
-    @include breakpoint ( breakpoint-large ){
+    @include mixin.breakpoint ( breakpoint-large ){
         width: 35%;
         // margin: auto;       // リセット
         // margin-right: 30px;  // margin設定
@@ -21,9 +25,9 @@
         padding: 11px 16px;
         //font: 15px/24px sans-serif;
 	    // box-sizing: border-box;
-        background: $color--background--search;
+        background: variable.$color--background--search;
         // transition: 0.3s;
-        border: 1px solid $color--text-main;    // 枠線指定（太さ・スタイル・色）
+        border: 1px solid variable.$color--text-main;    // 枠線指定（太さ・スタイル・色）
         border-radius: 0.5em;                   /* 角丸 */
         // outline: none;
         vertical-align: top;        // 入力フォームとボタンのズレ解消
@@ -37,9 +41,9 @@
         margin-left: 3%;
         // padding: 10px 52px;
         padding: 0.3em;
-        background: linear-gradient( $color--background--menu-pc , #DED8D3 );
-        color: $color--text-main;
-        border: 1px solid $color--text-main;    // 枠線指定（太さ・スタイル・色）
+        background: linear-gradient( variable.$color--background--menu-pc , #DED8D3 );
+        color: variable.$color--text-main;
+        border: 1px solid variable.$color--text-main;    // 枠線指定（太さ・スタイル・色）
         border-radius: 0.5em;                   /* 角丸 */
         cursor: pointer;
         // outline: none;

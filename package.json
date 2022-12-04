@@ -1,0 +1,30 @@
+{
+  "name": "hamburger-site",
+  "version": "1.0.0",
+  "description": "最終課題  \r ハンバーガーサイト",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JFish310/hamburger-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JFish310/hamburger-site/issues"
+  },
+  "homepage": "https://github.com/JFish310/hamburger-site#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "minimist": "^1.2.5",
+    "sass": "^1.49.8"
+  }
+}

@@ -1,27 +1,31 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
 /* archive, archive-searchページ内で使用 */
 .p-card{
     width: 336.11px;
-    color: $color--text-sub;
-    background-color: $color--card-background--menu;
+    color: variable.$color--text-sub;
+    background-color: variable.$color--card-background--menu;
     font-family: "M+ 1m";   // p-card内はM+ 1m
 
     display: flex;              /* 親要素に指定 */
     flex-direction: column;     /* 積み重なるように配置する */
 
     /* レスポンシブ対応 */
-    @include breakpoint( breakpoint-medium ){
+    @include mixin.breakpoint( breakpoint-medium ){
         flex-direction: row;     /* 積み重なるように配置する */
         width: 100%;    // 親に対して90%だけど、paddingは大枠で設定してるから…
         height: 357px;
     }
-    @include breakpoint( breakpoint-medium ){
+    @include mixin.breakpoint( breakpoint-medium ){
         height: 471px;
     }
 
     img{
         vertical-align: bottom; // 画像下の微妙な余白を消すため
         /* レスポンシブ対応 */
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             width: 50%;
             object-fit: cover;  // どのように埋め込むか。要素のコンテンツボックス全体を埋めるように拡大縮小
         }
@@ -30,23 +34,23 @@
     &__caption{
         padding: 30.5px 17px 43.7px 17px;
         /* レスポンシブ対応 */
-        @include breakpoint( breakpoint-medium ){
+        @include mixin.breakpoint( breakpoint-medium ){
             width: 50%;
             padding: 29px 59px 40px 34.7px;
         }
-        @include breakpoint( breakpoint-large ){
+        @include mixin.breakpoint( breakpoint-large ){
             padding: 53px 63px;
         }
         h3{
             font-size: 2.0rem;
             font-weight: 700;
-            @include breakpoint( breakpoint-large ){
+            @include mixin.breakpoint( breakpoint-large ){
                 font-size: 3.6rem;
             }
         }
         h4{
             font-weight: 700;
-            @include breakpoint( breakpoint-large ){
+            @include mixin.breakpoint( breakpoint-large ){
                 font-size: 2.4rem;
             }
         }
@@ -59,7 +63,7 @@
             // position: relative;
             margin: auto;       // 中央寄せ
             margin-top: 41px;
-            @include breakpoint( breakpoint-large ){
+            @include mixin.breakpoint( breakpoint-large ){
                 margin-top: 60px;
             }
         }
@@ -77,10 +81,10 @@
 
     max-height: 176px;
     /* レスポンシブ対応 */
-    @include breakpoint( breakpoint-medium ){
+    @include mixin.breakpoint( breakpoint-medium ){
         max-height: 373px;
     }
-    @include breakpoint( breakpoint-large ){
+    @include mixin.breakpoint( breakpoint-large ){
         max-height: 358px;
     }
 

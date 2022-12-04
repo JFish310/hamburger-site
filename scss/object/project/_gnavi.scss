@@ -1,6 +1,10 @@
+@use "../../foundation/base";
+@use "../../foundation/variable";
+@use "../../foundation/mixin";
+
 .p-gnavi{
-    background-color: $color--background--menu-pc;
-    color: $color--text-main;
+    background-color: variable.$color--background--menu-pc;
+    color: variable.$color--text-main;
     font-family: "M+ 1m";
     margin-bottom: 527px;
     // Menuの文字
@@ -8,7 +12,7 @@
         display: none;  // SP版、tablet版は非表示
         font-family: 'Roboto';
         font-size: 3.4rem;
-        @include breakpoint ( breakpoint-large ){
+        @include mixin.breakpoint ( breakpoint-large ){
             display: block;
         }
     }
@@ -19,7 +23,7 @@
     }
     &__main-menu{
     // .p-gnavi__main-menu{
-        @include breakpoint ( breakpoint-medium ){
+        @include mixin.breakpoint ( breakpoint-medium ){
             margin-top: 40px;   // h2との余白
             display: block;
             text-align: left;
