@@ -41,7 +41,7 @@ const destPath = {
 const sass         = require( 'gulp-sass' )( require('sass') );	// cssコンパイル
 const plumber      = require( 'gulp-plumber' );					// エラーが発生しても強制終了させない
 const notify       = require( 'gulp-notify' );					// エラー発生時のアラート出力
-//const postcss      = require( 'gulp-postcss' );					// Node.js製、CSS操作プラグインのフレームワーク
+const postcss      = require( 'gulp-postcss' );					// Node.js製、CSS操作プラグインのフレームワーク
 const autoprefixer = require( 'gulp-autoprefixer' );			// ベンダープレフィックス自動付与(条件はpackage.jsonに記載)
 const browserSync  = require( 'browser-sync' );					// ブラウザシンク
 const minimist     = require( 'minimist' );						// コマンドラインパーサー
@@ -71,6 +71,7 @@ const scssCompile = (done) => {
 	done();
 }
 
+/* Browser-sync部分は削除
 //---------------------------------------------------------
 //	minimist設定・Browser-sync
 //---------------------------------------------------------
@@ -78,7 +79,7 @@ const options = minimist( process.argv.slice(2),{ // process.argv=>コマンド�
 	string: 'domain',
 	default: {
 		// domain: 'humburger-site.local' // 引数初期値
-		domain: 'index' // 引数初期値
+		domain: 'index.html' // 引数初期値 C:\Users\AAAAA\htdocs\hamburger-site\index.html
 	}
 });
 // ローカルサーバー立ち上げ
@@ -100,6 +101,8 @@ const browserSyncReload = (done) => {
 	browserSync.reload();
 	done();
 }
+*/
+
 
 //---------------------------------------------------------
 //	watchタスク
@@ -117,7 +120,8 @@ const watchFiles = (done) => {
 exports.default = series(
 	// parallel( phpWatch, jsWatch, scssCompile ),
 	parallel( scssCompile ),
-	parallel( watchFiles, browserSyncFunc )
+	parallel( watchFiles )
+	// parallel( watchFiles, browserSyncFunc )
 );
 
 
