@@ -5,7 +5,6 @@
 ## 履歴  
 6/8     構成考察  
 6/9     環境構築  
-
 --  
 
 6/10    frontページ、マークアップ開始  
@@ -16,24 +15,22 @@
 7/30    リファクタリング終了
 7/31    質問に答えていただいた箇所のリファクタリング開始  
 8/2     リファクタリング終了  
-
 --  
 
 8/3     archiveページ開始  
 8/13    archiveページ終了、archive_searchマークアップ終了  
-
 --  
 
 8/19    singleページマークアップ開始  
 8/20-23 中断  
 8/24    Sass側開始  
 8/28    singleページ終了、全体のリファクタリング  
-
 --  
 
 8/29    静的コーディング提出 ⇒ OK  
 
-**frontページ**  
+
+### frontページ  
 【累計】  
 構成・設計        1h20m  
 環境構築          2h  
@@ -43,32 +40,34 @@ jQuery           4h
 リファクタリング  9h30m  
 合計　62h30m  
 
-**archiveページ**  
+### archiveページ  
 【累計】  
 マークアップ      2h15m  
 Sass             10h  
 合計　12h15m  
 
-**archive_searchページ**  
+### archive_searchページ  
 マークアップ      10m  
 
-**singleページ**  
+### singleページ  
 【累計】  
 マークアップ      45m  
 Sass             12h20m  
 合計　13h5m  
 
-**pageページ**  
+### pageページ  
 マークアップ      5m  
 
-**全体**  
+### 全体  
 リファクタリング  1h30m  
 
-**静的コーディング**  
+### 静的コーディング  
 合計　89h35m  
 
-**gulpに対応させる**  
-- 2022.1.
+**gulp対応**  
+- 2022.01・2022.12  合計7h30m
+DartSass対応・コンパイル  
+Browser-syncにも対応させたかったが、うまくいかないので、ブラウザでの確認はGoLiveのまま。  
 
 
 ***  
@@ -268,6 +267,10 @@ hamburger-site
 |  |  |  └─ _single.scss  
 |  |  └─utility  
 |  └─ style.scss  
+├─ node_modules  
+├─ gulpfile.js  
+├─ package.json  
+├─ package-lock.json  
 ├─ archive_search.html  
 ├─ archive.html  
 ├─ index.html  
@@ -275,5 +278,3 @@ hamburger-site
 ├─ single.html  
 └─ README.md  
 ```
-
-
